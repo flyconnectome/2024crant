@@ -100,7 +100,9 @@ bilatpn.lorns=fafbseg::flywire_ids("576460752712140692, 576460752763637138")
 crant_partner_summary(bilatpn.lorns, partners = 'o')
 
 vp3typevpn='576460752710144060'
-
+vp3typevpn.o=crant_partner_summary(vp3typevpn, partners = 'o')
+vp3typevpn.o %>% filter(weight>50) %>%  with(clipr::write_clip(post_id))
+vp3typevpn.o %>% slice_max(weight, n = 15) %>% with(clipr::write_clip(post_id))
 
 
 # https://spelunker.cave-explorer.org/#!middleauth+https://global.daf-apis.com/nglstate/api/v1/5494172141223936
