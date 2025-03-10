@@ -8,10 +8,20 @@
 clonal raider ant brain (CRANTb) dataset. 
 See https://github.com/flyconnectome/crantr for more details.
 
+To use, install R + Rstudio and open the .Rproj file.
+
+This repository includes an [renv lockfile](https://rstudio.github.io/renv/articles/renv.html) 
+to manage dependencies. When you start R it should offer to install any packages
+that you do not have. Although this can be a nice idea in general, there is
+a specific reason in this case: Alex Bates' 
+[crantr package](https://github.com/flyconnectome/crantr?tab=readme-ov-file) 
+currently depends on
+a development branch of the fafbseg package with some wrinkles in the authorisation
+mechanisms.
 
 Here is an R example of fishing upstream of a single Olfactory Projection Neuron (PN)
 to find its olfactory receptor input neurons (ORNs) and then going downstream 
-from the ORNs to find the other PNs in the glomerulus. It seems that ther are
+from the ORNs to find the other PNs in the glomerulus. It seems that there are
 at least 3 in this case.
 
 ```r
